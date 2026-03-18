@@ -61,8 +61,7 @@ This project demonstrates core ERP concepts such as vendor management, product m
 
 ### 1. Clone the repository
 ```text
-git clone 
-cd 
+git clone https://github.com/kritikaspidy/PO-Management-System.git 
 ```
 
 ### 2. Setup backend

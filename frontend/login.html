@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - PO Management System</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body class="login-body">
+
+  <div class="login-brand">
+    <div class="login-brand-icon">PO</div>
+    <span>PO Management System</span>
+  </div>
+
+  <div class="login-overlay"></div>
+
+  <main class="login-container">
+    <section class="login-card-v2">
+      <div class="login-icon-wrap">
+        <div class="login-icon">↗</div>
+      </div>
+
+      <h1 class="login-title-v2">Sign in with Google</h1>
+      <p class="login-subtitle-v2">
+        Access your purchase order dashboard, manage vendors, products, and create new purchase orders securely.
+      </p>
+
+      <div class="login-divider-v2">
+        <span>Continue with</span>
+      </div>
+
+      <div id="g_id_onload"
+           data-client_id="963573440971-50sctmmrjvjpp7efcbpjv7l2v5prq3rb.apps.googleusercontent.com"
+           data-callback="handleCredentialResponse">
+      </div>
+
+      <div class="login-google-wrap">
+        <div class="g_id_signin"
+             data-type="standard"
+             data-shape="pill"
+             data-theme="outline"
+             data-text="signin_with"
+             data-size="large"
+             data-logo_alignment="left"
+             data-width="320">
+        </div>
+      </div>
+
+      <div class="login-note-v2">
+        Secure authentication powered by Google OAuth and JWT
+      </div>
+    </section>
+  </main>
+
+  <script src="js/auth.js"></script>
+  <script>
+    if (localStorage.getItem("jwt")) {
+      window.location.replace("http://localhost:5500/index.html");
+    }
+  </script>
+</body>
+</html>
